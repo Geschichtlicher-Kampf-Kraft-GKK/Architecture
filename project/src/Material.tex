@@ -1,0 +1,305 @@
+\section{材料}{
+
+  \subsection{石材}{
+
+      \subsubsection{混凝土,一种人造石材}{
+          \paragraph{介绍}{
+              就专业角度来说,混凝土是一种由水泥,砂子,石子,水经过一定的配合比拌合后形成的混合物硬化后形成一种坚硬的人造石.
+
+              混凝土的强度由立方体抗压强度标准值决定,检测强度在游戏中过于繁琐,因此省去.只保留混凝土强度分级部分
+
+              混凝土强度以$C$开头,每$5Mpa$为一个分界线,从$C15-C80$一共分成14个等级.但是这并不适用于mc.
+          }
+
+          \paragraph{混凝土强度分级}{
+              在mc中,衡量一个方块的"坚固"程度主要取决于三点:方块的强度和方块的爆炸抗性,以及他的挖掘等级.
+
+              在1.12,一个方块最多可以有4个bit(取值范围0-15)作为blockstate的序列化空间,那么将其对半分,强度和抗爆性能各自分为4个等级 :
+
+              \begin{center}
+                  \begin{tabular}{|c|c|c|}
+                      \hline
+                      强度等级编号 & 对应的bit位取值 & 强度等级取值 \\
+                      \hline
+                      $\varphi-1$  & $00$            & 4            \\
+                      \hline
+                      $\varphi-2$  & $01$            & 16           \\
+                      \hline
+                      $\varphi-3$  & $10$            & 24           \\
+                      \hline
+                      $\varphi-4$  & $11$            & 40           \\
+                      \hline
+                      爆炸抗性编号 & 对应的bit位取值 & 爆炸抗性取值 \\
+                      \hline
+                      $\psi-1$     & $00$            & 4            \\
+                      \hline
+                      $\psi-2$     & $01$            & 6.5          \\
+                      \hline
+                      $\psi-3$     & $10$            & 14           \\
+                      \hline
+                      $\psi-4$     & $11$            & 33           \\
+                      \hline
+                  \end{tabular}
+              \end{center}
+
+              这么一来就可以正好填满4个bit位的空间,存储格式位强度等级在前,爆炸抗性在后 : $$
+                  \boxed{11}\boxed{11}
+              $$
+
+              而挖掘等级由这两者共同决定 : $$
+                  HarvestLevel = \ceil{0.1*(\varphi + \psi)}
+              $$
+          }
+
+          \paragraph{浇筑}{
+              混凝土的浇筑需要支模板,可以大面积一次性浇筑,这也是相对于普通方块的优势所在. :
+              \begin{itemize}[itemsep=1pt]
+                  \item 墙模板
+                  \item 梁模板
+                  \item 楼板/屋顶模板
+              \end{itemize}
+
+              模板是多方块结构,建议整一个方便的摆放方式,比如点击对角点自动消耗背包内的材料搭建之类的(
+
+              模板结构内部每个占位方块都作为独立的tileentity,会自动向四周分散混凝土浆(分散速度由浆液的和易性决定,间接的由配合比与材料的选取控制,不同配合比可以互相混合,两者之间线性插值),占位方块拥有(isReBar:boolean)成员(写在blockstate里面),当为true时浇筑出来的是钢筋混凝土,钢筋混凝土本身拥有更优秀的性能,在下一节中描述.
+
+              当接收到足够的混凝土浆后就开始凝固,凝固的速度按照混凝土浆的配合比决定.最终出产的混凝土方块也由配合比与材料选取决定.
+
+              如果浆液配的太差就会有特殊情况,比如毛面,蜂窝,露筋,缺陷.
+          }
+      }
+
+      \subsubsection{钢筋混凝土/特种混凝土}{
+          \paragraph{钢筋混凝土}{
+              \begin{center}
+                  \begin{tabular}{|c|c|c|}
+                      \hline
+                      强度等级编号 & 对应的bit位取值 & 强度等级取值 \\
+                      \hline
+                      $\varphi-1$  & $00$            & 16           \\
+                      \hline
+                      $\varphi-2$  & $01$            & 24           \\
+                      \hline
+                      $\varphi-3$  & $10$            & 48           \\
+                      \hline
+                      $\varphi-4$  & $11$            & 64           \\
+                      \hline
+                      爆炸抗性编号 & 对应的bit位取值 & 爆炸抗性取值 \\
+                      \hline
+                      $\psi-1$     & $00$            & 6.5          \\
+                      \hline
+                      $\psi-2$     & $01$            & 14           \\
+                      \hline
+                      $\psi-3$     & $10$            & 33           \\
+                      \hline
+                      $\psi-4$     & $11$            & 50           \\
+                      \hline
+                  \end{tabular}
+              \end{center}
+          }
+
+          \paragraph{特种混凝土}{
+              是否有必要存在待商讨
+          }
+      }
+
+  }
+
+  \subsection{金属}{
+      我不太懂冶金学.
+
+      未注明的,默认挖掘等级为铁.
+
+      \subsubsection{铸铁}{
+          \paragraph{介绍}{
+              以下资料来自于wiki :
+
+              铸铁(英语:Cast iron)是指含碳量在2\%$\sim$6.67\%的铸造铁碳合金的总称,通常由生铁,废钢,铁合金等以不同比例配合通过熔炼而成.
+
+              主要元素除铁,碳以外还有硅,锰和少量的磷与硫等元素,是将生铁(有时有炼钢生铁)重新回炉熔化,并加进铁合金,废钢,回炉铁调整成分而得到的.
+
+              简而言之,似乎就是以铁为主要成分的回收金属?
+
+              一般拿它来做井盖(
+          }
+
+          铸铁来自于大型合金炉({\ref{big_alloy_furnace}})
+
+          以下为主要用途 :
+          \begin{itemize}[itemsep=1pt]
+              \item 井盖,栏杆,梯子,脚手架等次要结构/廉价的构件.
+              \item 厨具 : 是的,铸铁能做厨具(
+              \item 武器 : 挖掘等级为铁,耐久0.75倍
+          \end{itemize}
+
+          以下为作为方块时的强度等级对照表 :
+
+          \begin{center}
+              \begin{tabular}{|c|c|c|c|}
+                  \hline
+                  强度符号 & 抗爆   & 强度等级 & 对应的bit位取值 \\
+                  \hline
+                  A        & 4      & 4        & 0000            \\
+                  \hline
+                  B        & 8      & 5        & 0001            \\
+                  \hline
+                  C        & 12     & 6        & 0010            \\
+                  \vdots   & \vdots & \vdots   & \vdots          \\
+                  P        & 64     & 20       & 1111            \\
+                  \hline
+              \end{tabular}
+          \end{center}
+
+
+          铸铁制品可堆叠的,最大堆叠为24
+      }
+
+      \subsubsection{不锈钢}{
+          不锈钢来自于大型炼钢炉({\ref{steelmaking_furnace}})
+
+          以下为主要用途 :
+          \begin{itemize}[itemsep=1pt]
+              \item 餐具,厨具,工具等.(等级为铁,耐久1.3倍)
+              \item 特种结构,对腐蚀有要求的结构(如,钢管,大型地标构件).
+              \item 一般结构.
+              \item 作为进一步的合成材料补充给其他mod.
+          \end{itemize}
+
+          以下为强度等级对照表 :
+
+          \begin{center}
+              \begin{tabular}{|c|c|c|c|}
+                  \hline
+                  强度符号 & 抗爆   & 强度等级 & 对应的bit位取值 \\
+                  \hline
+                  A        & 4.375  & 6        & 0000            \\
+                  \hline
+                  B        & 8.75   & 7.5      & 0001            \\
+                  \hline
+                  C        & 13.125 & 9        & 0010            \\
+                  \vdots   & \vdots & \vdots   & \vdots          \\
+                  P        & 70     & 28.5     & 1111            \\
+                  \hline
+              \end{tabular}
+          \end{center}
+
+          不锈钢制品可堆叠的,最大堆叠为32
+      }
+
+      \subsubsection{钛}{
+          来自于工业高炉({\ref{industrial_blast_furnace}})
+
+          主要用途 :
+          \begin{itemize}[itemsep=1pt]
+              \item 餐具,厨具,工具等.(等级为铁,耐久为1.8倍)
+              \item 特种结构:对强度和重量有要求且耐腐蚀的.
+              \item 一般结构.
+              \item 作为进一步合成材料补充给其他mod.
+          \end{itemize}
+
+          由于钛只有单质或合金,并不存在优质或劣质,因此只有一行强度等级 :
+          \begin{center}
+              \begin{tabular}{|c|c|c|c|}
+                  \hline
+                  强度符号 & 强度等级 & 抗爆等级 & bit位取值 \\
+                  \hline
+                  $\sigma$ & 6.5      & 14       & 0000      \\
+                  \hline
+              \end{tabular}
+          \end{center}
+
+          钛制品可堆叠的,最大堆叠为45.
+      }
+
+      \subsubsection{轻钢}{
+          玩梗材料,属性等于铸铁,可用于所有位置.
+
+          \sout{轻钢建筑其实是个骗局}
+
+          轻钢制品可堆叠的,最大堆叠数量为32
+      }
+
+      \subsubsection{铝}{
+          来自于工业高炉({\ref{industrial_blast_furnace}})
+
+          主要用途 :
+          \begin{itemize}[itemsep=1pt]
+              \item 餐具,厨具,工具等.(等级为石,耐久1.5倍)
+              \item 对强度要求低但是对重量要求高的结构.
+              \item 次要结构.
+              \item 作为进一步合成材料补充给其他mod.
+          \end{itemize}
+
+          由于钛只有单质或合金,并不存在优质或劣质,因此只有一行强度等级 :
+          \begin{center}
+              \begin{tabular}{|c|c|c|c|}
+                  \hline
+                  强度符号 & 强度等级 & 抗爆等级 & bit位取值 \\
+                  \hline
+                  $\sigma$ & 4.5      & 14       & 0000      \\
+                  \hline
+              \end{tabular}
+          \end{center}
+
+          铝制品可堆叠的,最大堆叠为64.
+
+          挖掘等级为石.
+      }
+
+      \subsubsection{合金}{
+          庞大而复杂的机制,是否需要删改待商定.
+
+          合金过程中时会将材料的各个属性(强度,抗爆)取平均值,也有外加剂(可以改善某一方面的性能)
+
+          某些金属拥有特殊的特性,这些特性会在最后的出炉凝结阶段影响最终值,比如钛,可以将最终产物的挖掘等级以及强度,抗爆性能,抗腐蚀性全方面提高.
+
+          特性要不就硬编码一下?
+
+          当炉中的材料比例满足某些特定取值的时候会产出特定合金,否则产出一般合金("一般"指的不是性能上的一般,而是泛指一些没有命名的合金.).
+
+          各个属性使用nbt存储,具体有哪些属性待定,取决于其他策划案(如:自然灾害,是否有酸雨会造成腐蚀?是否有地震?是否有高温情况?).
+      }
+  }
+
+  \subsection{木材}{
+      \subsubsection{一般木材}{
+
+      }
+
+      \subsubsection{胶合板}{
+
+      }
+
+      \subsubsection{复合板}{
+
+      }
+
+      \subsubsection{特种木材}{
+
+      }
+  }
+
+  \subsection{砖石}{
+
+      \subsubsection{粘土砖}{
+
+      }
+
+      \subsubsection{混凝土砌块}{
+
+      }
+
+      \subsubsection{空心砌块}{
+
+      }
+
+      \subsubsection{水泥砂浆}{
+
+      }
+
+  }
+ }
+
+\section{建材}{
+  此章是具体的方块构件,以及对于材料章节某些概念的定义.
+ }

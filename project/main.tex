@@ -1,0 +1,56 @@
+\documentclass[UTF8,12pt]{ctexbook}
+
+\usepackage[]{ctex}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{geometry}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{indentfirst}
+\usepackage[center]{titlesec}
+\usepackage{graphicx}
+\usepackage{esint}
+\usepackage{cases}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{pdfpages}
+\usepackage{cancel}
+\usepackage{markdown}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{ulem}
+
+\geometry{left=1cm,right=1cm,top=3cm,bottom=3cm}
+\title{建筑学策划案}
+\date{最后编译日期:\today}
+\author{dbydd}
+\kaishu
+\setlength{\parindent}{2em}
+\titleformat{\section}[block]{\LARGE\itshape\mdseries}{\arabic{section}}{1em}{}[]
+\titleformat{\subsection}[block]{\Large\itshape\mdseries}{\arabic{section}.\arabic{subsection}}{1em}{}[]
+\titleformat{\subsubsection}[block]{\large\itshape\mdseries}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}{1em}{}[]
+\titleformat{\paragraph}[block]{\small\bfseries}{[\arabic{paragraph}]}{1em}{}[]
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\setlength{\baselineskip}{1pt}
+
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil }
+
+\begin{document}
+\pagestyle{empty}
+\maketitle
+
+\tableofcontents
+\setcounter{page}{1}
+
+
+\include{src/Material}
+\include{src/Machine}
+% \include{src/Generate}
+% \include{src/Tools}
+% \include{src/Changes}
+
+
+\end{document}
