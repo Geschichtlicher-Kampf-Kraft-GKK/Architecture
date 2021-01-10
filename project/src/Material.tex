@@ -263,43 +263,133 @@
 
   \subsection{木材}{
       \subsubsection{一般木材}{
-
+          原版的木板.
       }
 
       \subsubsection{胶合板}{
+          薄木加胶水合成 :
+          \begin{center}
+              1 : 薄木板
 
-      }
+              2 : 胶水
 
-      \subsubsection{复合板}{
+              0 : 无
 
+              $$
+                  \begin{bmatrix}
+                      0 & 1 & 0 \\
+                      0 & 1 & 2 \\
+                      0 & 1 & 0
+                  \end{bmatrix}
+              $$
+          \end{center}
+
+          胶合板拥有比普通木材更便宜的造价(1原木 : 8胶合板,即一个原木切出来24片薄木板),但是性能没有区别.
       }
 
       \subsubsection{特种木材}{
+          特种木材 : 世界上会生成特殊树木,也能通过人工制造(抗燃,防水,耐腐蚀,耐冲击等).
 
+          如果并未特化,那么性能也和一般木材没区别.
       }
   }
 
   \subsection{砖石}{
 
       \subsubsection{粘土砖}{
+          材料为粘土
 
+          使用压模器({\ref{compressor}})批量生产,也可以通过模板手动合成
+
+          砖窑批量烧制,一次性可烧制4组砖,按照烧制时间(待讨论)决定砖头的强度.抗爆强度由水泥砂浆决定.
+
+          四块砖加一份水泥砂浆({\ref{cement_mortar}})合成砖块,也可以在世界中通过铲刀({\ref{spatula}})快速摆放
+
+          以下为砖的强度表 :
+
+          \begin{center}
+              \begin{tabular}{|c|c|c|}
+                  \hline
+                  等级符号 & 强度等级 & bit位取值 \\
+                  \hline
+                  MU1      & 2        & 00        \\
+                  \hline
+                  MU2      & 4        & 01        \\
+                  \hline
+                  MU3      & 8        & 10        \\
+                  \hline
+                  MU4      & 16       & 11        \\
+                  \hline
+              \end{tabular}
+          \end{center}
       }
 
       \subsubsection{混凝土砌块}{
-
-      }
-
-      \subsubsection{空心砌块}{
-
+          强度同混凝土,由压模器批量生产,可通过铲刀快速摆放,抗爆性由水泥砂浆({\ref{cement_mortar}})决定.
       }
 
       \subsubsection{水泥砂浆}{
+          由细骨料(砂),水,水泥({\ref{cement}})在搅拌机({\ref{blender}})中拌制.
 
-      }
+          配合比决定抗爆性能,水泥决定特性.
+
+          注 : 配合比待平衡.
+
+          注 : 配合比纯属虚构,实际情况远比这个复杂
+
+          \begin{center}
+              \begin{tabular}{|c|c|c|c|c|c|}
+                  \hline
+                  抗爆等级代号 & 抗爆等级 & 水泥用量区间   & 砂用量区间     & 水用量区间     & bit位取值 \\
+                  \hline
+                  M1           & 6        & 110 $\sim$ 130 & 580 $\sim$ 540 & 310 $\sim$ 330 & 00        \\
+                  \hline
+                  M2           & 12       & 131 $\sim$ 150 & 539 $\sim$ 390 & 310 $\sim$ 330 & 01        \\
+                  \hline
+                  M3           & 24       & 151 $\sim$ 170 & 381 $\sim$ 340 & 310 $\sim$ 330 & 10        \\
+                  \hline
+                  M4           & 48       & 171 $\sim$ 190 & 339 $\sim$ 290 & 310 $\sim$ 330 & 11        \\
+                  \hline
+              \end{tabular}
+          \end{center}
+      }\label{cement_mortar}
+
+      \subsubsection{水泥}{
+          来源 : 工业高炉煅烧.耗时统一30秒(现实时间)
+
+          水泥有很多种类 :
+
+          \begin{center}
+              \begin{tabular}{|c|c|c|}
+                  \hline
+                  名称         & 特性        & 来源                                        \\
+                  \hline
+                  火山灰水泥   & 抗高温      & 3火山灰 + 1草木灰/炉渣 + 1石膏粉            \\
+                  \hline
+                  硅酸盐水泥   & 防水        & 4炉渣/草木灰 + 1石膏粉/石灰石               \\
+                  \hline
+                  萤石酸盐水泥 & 高抗爆,防水 & 2萤石粉 + 1石灰石 + 1草木灰/炉渣            \\
+                  \hline
+                  铝酸盐水泥   & 抗冻,抗腐蚀 & 1铝粉 + 1硫粉/铁粉 + 1石灰石 + 1草木灰/炉渣 \\
+                  \hline
+              \end{tabular}
+          \end{center}
+
+          注 : 寻思个可以生成火山的mod,或者把火山灰当作地狱土特产?
+      }\label{cement}
 
   }
  }
 
 \section{建材}{
   此章是具体的方块构件,以及对于材料章节某些概念的定义.
+
+  \subsection{概念}{
+      \begin{itemize}
+          \item 次要构件/廉价构件 : 指不作为房子主体且使用时间短的的功能性/装饰性方块(如 : 梯子,井盖,路灯,椅子,垃圾桶等)
+          \item 次要结构 : 房屋内部的交通设施与家具 : 梯子,楼梯,扶手,箱子等
+          \item 主要结构/一般结构 : 房屋主体建材 : 梁板柱墙以及单位方块(砖块,金属块(不是那种9合1)等)
+      \end{itemize}
+  }
+
  }
