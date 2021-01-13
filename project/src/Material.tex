@@ -230,7 +230,7 @@
               \item 作为进一步合成材料补充给其他mod.
           \end{itemize}
 
-          由于钛只有单质或合金,并不存在优质或劣质,因此只有一行强度等级 :
+          由于铝只有单质或合金,并不存在优质或劣质,因此只有一行强度等级 :
           \begin{center}
               \begin{tabular}{|c|c|c|c|}
                   \hline
@@ -244,6 +244,41 @@
           铝制品可堆叠的,最大堆叠为64.
 
           挖掘等级为石.
+      }
+
+      \subsubsection{钢}{
+          来自于工业高炉({\ref{industrial_blast_furnace}})
+
+          等级取决于材料用量,各元素含量越接近理想数值则强度越高.(待讨论)
+
+          主要用途 :
+          \begin{itemize}[itemsep=1pt]
+              \item 厨具,工具等(等级为铁,耐久2倍)
+              \item 特种结构
+              \item 一般结构
+              \item 强化结构层
+              \item 作为合成材料
+          \end{itemize}
+
+          等级表 :
+
+          \begin{center}
+              \begin{tabular}{|c|c|c|c|}
+                  \hline
+                  强度符号  & 强度等级 & 抗爆等级 & bit位取值 \\
+                  \hline
+                  $\Phi_1$  & 6        & 13       & 0000      \\
+                  \hline
+                  $\Phi_2$  & 10       & 20       & 0001      \\
+                  \hline
+                  $\phi_3$  & 14       & 27       & 0010      \\
+                  \vdots    & \vdots   & \vdots   & \vdots    \\
+                  $\phi_16$ & 66       & 118      & 1111      \\
+                  \hline
+              \end{tabular}
+          \end{center}
+
+          注 : 钢制品可堆叠的,最大堆叠为24.
       }
 
       \subsubsection{合金}{
@@ -392,4 +427,147 @@
       \end{itemize}
   }
 
+  \subsection{方块清单 : 混凝土}{
+      \begin{itemize}
+          \item 混凝土(方块)
+          \item 混凝土砖
+          \item 混凝土台阶
+          \item 混凝土楼梯
+          \item 混凝土板
+          \item 混凝土梁
+          \item 混凝土墙
+          \item 混凝土柱
+          \item 混凝土围墙
+      \end{itemize}
+  }
+
+  \subsection{方块清单 : 钢筋混凝土}{
+      同混凝土
+  }
+
+  \subsection{方块清单 : 铸铁}{
+      \begin{itemize}
+          \item 铸铁(方块)
+          \item 井盖
+          \item 路灯
+          \item 栏杆
+          \item 椅子
+          \item 垃圾桶(能量,物品,流体)
+          \item 垃圾桶(容器)
+          \item 锅碗瓢盆
+          \item 门(多方块)
+          \item 门(1*2)
+          \item 台阶
+          \item 铁丝网
+          \item 保险箱
+      \end{itemize}
+  }
+
+  \subsection{方块清单 : 不锈钢}{
+      \begin{itemize}
+          \item 不锈钢(方块)
+          \item 不锈钢钢管
+          \item 锅碗瓢盆
+          \item 扶手
+          \item 门(多方块)
+          \item 门(1*2)
+          \item 板(方块)
+          \item 柱(可倾斜)
+          \item 锅碗瓢盆
+          \item 台阶
+          \item 管道
+          \item 脚手架
+          \item 铁丝网
+          \item 通风管
+      \end{itemize}
+  }
+
+  \subsection{方块清单 : 钛}{
+      \begin{itemize}
+          \item 钛(方块)
+          \item 梁
+          \item 板
+          \item 柱
+          \item 墙
+          \item 楼梯
+          \item 扶手
+          \item 栏杆
+          \item 锅碗瓢盆
+          \item 门(方块)
+          \item 门(1*2)
+          \item 空心管
+          \item 管道
+          \item 脚手架
+          \item 脚手架(悬空式)
+          \item 工字钢
+          \item 钢筋
+          \item 通风管
+          \item 保险箱
+      \end{itemize}
+  }
+
+  \subsection{方块清单 : 轻钢}{
+      所有位置
+  }
+
+  \subsection{方块清单 : 铝}{
+      \begin{itemize}
+          \item 铝(金属块)
+          \item 锅碗瓢盆
+          \item 墙
+          \item 楼梯
+          \item 管道
+          \item 空心管
+          \item 门(1*2)
+          \item 通风管
+      \end{itemize}
+  }
+
+  \subsection{方块清单 : 钢}{
+      \begin{itemize}
+          \item 钢(金属块)
+          \item 锅碗瓢盆
+          \item 钢筋
+          \item 钢筋网
+          \item 铁丝网
+          \item 门(方块)
+          \item 门(1*2)
+          \item 工字钢
+          \item 空心钢管
+          \item 管道
+          \item 梁
+          \item 板
+          \item 柱(可倾斜)
+          \item 墙
+          \item 楼梯
+          \item 金属板块
+          \item 脚手架
+          \item 悬空式脚手架
+          \item 挂式脚手架
+          \item 栏杆
+          \item 通风管
+          \item 保险箱
+          \item 大型保险箱
+          \item 台阶
+      \end{itemize}
+  }
+
+  \subsection{方块清单 : 合金}{
+      所有构件
+  }
+
+  \subsection{方块清单 : 木材}{
+      所有构件
+  }
+
+  \subsection{方块清单 : 砖石}{
+      \begin{itemize}
+          \item 方块
+          \item 墙
+          \item 柱
+          \item 楼梯
+          \item 台阶
+      \end{itemize}
+
+  }
  }
