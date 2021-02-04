@@ -1,5 +1,6 @@
 package gkk.architecture;
 
+import gkk.gkkbase.GkkBase;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
