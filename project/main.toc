@@ -11,63 +11,62 @@
 \contentsline {subsubsection}{\numberline {0.1.2.1}铸铁}{4}{subsubsection.0.1.2.1}%
 \contentsline {paragraph}{介绍}{4}{subsubsection.0.1.2.1}%
 \contentsline {subsubsection}{\numberline {0.1.2.2}不锈钢}{5}{subsubsection.0.1.2.2}%
-\contentsline {subsubsection}{\numberline {0.1.2.3}钛}{6}{subsubsection.0.1.2.3}%
-\contentsline {subsubsection}{\numberline {0.1.2.4}轻钢}{6}{subsubsection.0.1.2.4}%
-\contentsline {subsubsection}{\numberline {0.1.2.5}铝}{6}{subsubsection.0.1.2.5}%
-\contentsline {subsubsection}{\numberline {0.1.2.6}钢}{7}{subsubsection.0.1.2.6}%
-\contentsline {subsubsection}{\numberline {0.1.2.7}合金}{7}{subsubsection.0.1.2.7}%
-\contentsline {subsection}{\numberline {0.1.3}木材}{8}{subsection.0.1.3}%
-\contentsline {subsubsection}{\numberline {0.1.3.1}一般木材}{8}{subsubsection.0.1.3.1}%
-\contentsline {subsubsection}{\numberline {0.1.3.2}胶合板}{8}{subsubsection.0.1.3.2}%
+\contentsline {subsubsection}{\numberline {0.1.2.3}钛}{5}{subsubsection.0.1.2.3}%
+\contentsline {subsubsection}{\numberline {0.1.2.4}铝}{6}{subsubsection.0.1.2.4}%
+\contentsline {subsubsection}{\numberline {0.1.2.5}钢}{6}{subsubsection.0.1.2.5}%
+\contentsline {subsubsection}{\numberline {0.1.2.6}合金}{7}{subsubsection.0.1.2.6}%
+\contentsline {subsection}{\numberline {0.1.3}木材}{7}{subsection.0.1.3}%
+\contentsline {subsubsection}{\numberline {0.1.3.1}一般木材}{7}{subsubsection.0.1.3.1}%
+\contentsline {subsubsection}{\numberline {0.1.3.2}胶合板}{7}{subsubsection.0.1.3.2}%
 \contentsline {subsubsection}{\numberline {0.1.3.3}特种木材}{8}{subsubsection.0.1.3.3}%
 \contentsline {subsection}{\numberline {0.1.4}砖石}{8}{subsection.0.1.4}%
 \contentsline {subsubsection}{\numberline {0.1.4.1}粘土砖}{8}{subsubsection.0.1.4.1}%
-\contentsline {subsubsection}{\numberline {0.1.4.2}混凝土砌块}{9}{subsubsection.0.1.4.2}%
+\contentsline {subsubsection}{\numberline {0.1.4.2}混凝土砌块}{8}{subsubsection.0.1.4.2}%
 \contentsline {subsubsection}{\numberline {0.1.4.3}水泥砂浆}{9}{subsubsection.0.1.4.3}%
 \contentsline {subsubsection}{\numberline {0.1.4.4}水泥}{9}{subsubsection.0.1.4.4}%
-\contentsline {section}{\numberline {0.2}建材}{10}{section.0.2}%
-\contentsline {subsection}{\numberline {0.2.1}概念}{10}{subsection.0.2.1}%
+\contentsline {section}{\numberline {0.2}建材}{9}{section.0.2}%
+\contentsline {subsection}{\numberline {0.2.1}概念}{9}{subsection.0.2.1}%
 \contentsline {subsection}{\numberline {0.2.2}方块清单 : 混凝土}{10}{subsection.0.2.2}%
 \contentsline {subsection}{\numberline {0.2.3}方块清单 : 钢筋混凝土}{10}{subsection.0.2.3}%
-\contentsline {subsection}{\numberline {0.2.4}方块清单 : 铸铁}{11}{subsection.0.2.4}%
+\contentsline {subsection}{\numberline {0.2.4}方块清单 : 铸铁}{10}{subsection.0.2.4}%
 \contentsline {subsection}{\numberline {0.2.5}方块清单 : 不锈钢}{11}{subsection.0.2.5}%
 \contentsline {subsection}{\numberline {0.2.6}方块清单 : 钛}{12}{subsection.0.2.6}%
 \contentsline {subsection}{\numberline {0.2.7}方块清单 : 轻钢}{13}{subsection.0.2.7}%
 \contentsline {subsection}{\numberline {0.2.8}方块清单 : 铝}{13}{subsection.0.2.8}%
-\contentsline {subsection}{\numberline {0.2.9}方块清单 : 钢}{14}{subsection.0.2.9}%
+\contentsline {subsection}{\numberline {0.2.9}方块清单 : 钢}{13}{subsection.0.2.9}%
 \contentsline {subsection}{\numberline {0.2.10}方块清单 : 合金}{15}{subsection.0.2.10}%
 \contentsline {subsection}{\numberline {0.2.11}方块清单 : 木材}{15}{subsection.0.2.11}%
 \contentsline {subsection}{\numberline {0.2.12}方块清单 : 砖石}{15}{subsection.0.2.12}%
-\contentsline {subsection}{\numberline {0.2.13}物品清单}{16}{subsection.0.2.13}%
-\contentsline {subsubsection}{\numberline {0.2.13.1}物品清单 : 铸铁}{16}{subsubsection.0.2.13.1}%
-\contentsline {subsubsection}{\numberline {0.2.13.2}物品清单 : 不锈钢}{16}{subsubsection.0.2.13.2}%
+\contentsline {subsection}{\numberline {0.2.13}物品清单}{15}{subsection.0.2.13}%
+\contentsline {subsubsection}{\numberline {0.2.13.1}物品清单 : 铸铁}{15}{subsubsection.0.2.13.1}%
+\contentsline {subsubsection}{\numberline {0.2.13.2}物品清单 : 不锈钢}{15}{subsubsection.0.2.13.2}%
 \contentsline {subsubsection}{\numberline {0.2.13.3}物品清单 : 钛}{16}{subsubsection.0.2.13.3}%
 \contentsline {subsubsection}{\numberline {0.2.13.4}物品清单 : 铝}{16}{subsubsection.0.2.13.4}%
 \contentsline {subsubsection}{\numberline {0.2.13.5}物品清单 : 钢}{16}{subsubsection.0.2.13.5}%
-\contentsline {subsubsection}{\numberline {0.2.13.6}其他物品}{17}{subsubsection.0.2.13.6}%
-\contentsline {section}{\numberline {0.3}机器设备}{18}{section.0.3}%
-\contentsline {subsection}{\numberline {0.3.1}施工机械}{18}{subsection.0.3.1}%
-\contentsline {subsection}{\numberline {0.3.2}生产机械}{18}{subsection.0.3.2}%
-\contentsline {subsubsection}{\numberline {0.3.2.1}大型合金炉}{18}{subsubsection.0.3.2.1}%
-\contentsline {subsubsection}{\numberline {0.3.2.2}大型炼钢炉}{18}{subsubsection.0.3.2.2}%
-\contentsline {subsubsection}{\numberline {0.3.2.3}工业高炉}{18}{subsubsection.0.3.2.3}%
-\contentsline {subsubsection}{\numberline {0.3.2.4}千兆巨构-超大型锻造环(尼德维阿尔)}{18}{subsubsection.0.3.2.4}%
-\contentsline {subsubsection}{\numberline {0.3.2.5}压模器/压缩机}{18}{subsubsection.0.3.2.5}%
-\contentsline {subsubsection}{\numberline {0.3.2.6}搅拌机}{18}{subsubsection.0.3.2.6}%
-\contentsline {section}{\numberline {0.4}工具}{19}{section.0.4}%
-\contentsline {subsection}{\numberline {0.4.1}无需电力}{19}{subsection.0.4.1}%
-\contentsline {subsubsection}{\numberline {0.4.1.1}铲刀}{19}{subsubsection.0.4.1.1}%
-\contentsline {subsubsection}{\numberline {0.4.1.2}脚手架绑扎手套}{19}{subsubsection.0.4.1.2}%
-\contentsline {subsubsection}{\numberline {0.4.1.3}模板编织手套}{19}{subsubsection.0.4.1.3}%
-\contentsline {subsubsection}{\numberline {0.4.1.4}红桶}{20}{subsubsection.0.4.1.4}%
-\contentsline {subsubsection}{\numberline {0.4.1.5}建筑图纸}{20}{subsubsection.0.4.1.5}%
-\contentsline {subsubsection}{\numberline {0.4.1.6}绘图板}{20}{subsubsection.0.4.1.6}%
-\contentsline {subsubsection}{\numberline {0.4.1.7}砂浆桶}{20}{subsubsection.0.4.1.7}%
-\contentsline {subsubsection}{\numberline {0.4.1.8}大型扳手}{20}{subsubsection.0.4.1.8}%
-\contentsline {subsubsection}{\numberline {0.4.1.9}锯子}{20}{subsubsection.0.4.1.9}%
-\contentsline {subsubsection}{\numberline {0.4.1.10}石蝶}{21}{subsubsection.0.4.1.10}%
-\contentsline {subsection}{\numberline {0.4.2}需要电力}{21}{subsection.0.4.2}%
-\contentsline {subsubsection}{\numberline {0.4.2.1}电动夯实机}{21}{subsubsection.0.4.2.1}%
-\contentsline {subsubsection}{\numberline {0.4.2.2}电锯}{21}{subsubsection.0.4.2.2}%
-\contentsline {subsubsection}{\numberline {0.4.2.3}AutoChairCAD}{21}{subsubsection.0.4.2.3}%
-\contentsline {subsubsection}{\numberline {0.4.2.4}AutoChairBIM}{21}{subsubsection.0.4.2.4}%
+\contentsline {subsubsection}{\numberline {0.2.13.6}其他物品}{16}{subsubsection.0.2.13.6}%
+\contentsline {section}{\numberline {0.3}机器设备}{17}{section.0.3}%
+\contentsline {subsection}{\numberline {0.3.1}施工机械}{17}{subsection.0.3.1}%
+\contentsline {subsection}{\numberline {0.3.2}生产机械}{17}{subsection.0.3.2}%
+\contentsline {subsubsection}{\numberline {0.3.2.1}大型合金炉}{17}{subsubsection.0.3.2.1}%
+\contentsline {subsubsection}{\numberline {0.3.2.2}大型炼钢炉}{17}{subsubsection.0.3.2.2}%
+\contentsline {subsubsection}{\numberline {0.3.2.3}工业高炉}{17}{subsubsection.0.3.2.3}%
+\contentsline {subsubsection}{\numberline {0.3.2.4}千兆巨构-超大型锻造环(尼德维阿尔)}{17}{subsubsection.0.3.2.4}%
+\contentsline {subsubsection}{\numberline {0.3.2.5}压模器/压缩机}{17}{subsubsection.0.3.2.5}%
+\contentsline {subsubsection}{\numberline {0.3.2.6}搅拌机}{17}{subsubsection.0.3.2.6}%
+\contentsline {section}{\numberline {0.4}工具}{18}{section.0.4}%
+\contentsline {subsection}{\numberline {0.4.1}无需电力}{18}{subsection.0.4.1}%
+\contentsline {subsubsection}{\numberline {0.4.1.1}铲刀}{18}{subsubsection.0.4.1.1}%
+\contentsline {subsubsection}{\numberline {0.4.1.2}脚手架绑扎手套}{18}{subsubsection.0.4.1.2}%
+\contentsline {subsubsection}{\numberline {0.4.1.3}模板编织手套}{18}{subsubsection.0.4.1.3}%
+\contentsline {subsubsection}{\numberline {0.4.1.4}红桶}{19}{subsubsection.0.4.1.4}%
+\contentsline {subsubsection}{\numberline {0.4.1.5}建筑图纸}{19}{subsubsection.0.4.1.5}%
+\contentsline {subsubsection}{\numberline {0.4.1.6}绘图板}{19}{subsubsection.0.4.1.6}%
+\contentsline {subsubsection}{\numberline {0.4.1.7}砂浆桶}{19}{subsubsection.0.4.1.7}%
+\contentsline {subsubsection}{\numberline {0.4.1.8}大型扳手}{19}{subsubsection.0.4.1.8}%
+\contentsline {subsubsection}{\numberline {0.4.1.9}锯子}{19}{subsubsection.0.4.1.9}%
+\contentsline {subsubsection}{\numberline {0.4.1.10}石蝶}{20}{subsubsection.0.4.1.10}%
+\contentsline {subsection}{\numberline {0.4.2}需要电力}{20}{subsection.0.4.2}%
+\contentsline {subsubsection}{\numberline {0.4.2.1}电动夯实机}{20}{subsubsection.0.4.2.1}%
+\contentsline {subsubsection}{\numberline {0.4.2.2}电锯}{20}{subsubsection.0.4.2.2}%
+\contentsline {subsubsection}{\numberline {0.4.2.3}AutoChairCAD}{20}{subsubsection.0.4.2.3}%
+\contentsline {subsubsection}{\numberline {0.4.2.4}AutoChairBIM}{20}{subsubsection.0.4.2.4}%
