@@ -1,6 +1,5 @@
 package gkk.architecture.registered_lists;
 
-import gkk.architecture.Items.VanillaTools;
 import gkk.gkkbase.GkkBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
@@ -9,6 +8,8 @@ import net.minecraftforge.registries.IForgeRegistryEntry;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import VanillaTools;
 
 public class ToolMaterials {
     public static Map<String, ToolMaterial> materials = new HashMap<>();
@@ -20,9 +21,9 @@ public class ToolMaterials {
         addToolMaterial(new ToolMaterial("ALUMINUM", 1, (int) (1.5 * 131), 4.5f, 1.5f, 6));
         addToolMaterial(new ToolMaterial("STEEL", 2, (int) (2 * 250), 8.0f, 2.5f, 15));
 
-
         for (ToolMaterials.ToolMaterial value : ToolMaterials.materials.values()) {
-            EnumHelper.addToolMaterial(value.getName(), value.getHarvestLevel(), value.getMaxUses(), value.getEfficiency(), value.getDamage(), value.getEnchantAbility());
+            EnumHelper.addToolMaterial(value.getName(), value.getHarvestLevel(), value.getMaxUses(),
+                    value.getEfficiency(), value.getDamage(), value.getEnchantAbility());
         }
     }
 
@@ -46,7 +47,8 @@ public class ToolMaterials {
         private final float damage;
         private final int enchantAbility;
 
-        public ToolMaterial(String name, int harvestLevel, int maxUses, float efficiency, float damage, int enchantAbility) {
+        public ToolMaterial(String name, int harvestLevel, int maxUses, float efficiency, float damage,
+                int enchantAbility) {
             this.name = name;
             this.harvestLevel = harvestLevel;
             this.maxUses = maxUses;

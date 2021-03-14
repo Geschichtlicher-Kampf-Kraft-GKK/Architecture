@@ -1,11 +1,11 @@
-arguments=-Dhttp.proxyHost\=127.0.0.1 -Dhttp.proxyPort\=8889 -DsocksProxyHost\=127.0.0.1 -DsocksProxyPort\=8888
+arguments=
 auto.sync=false
 build.scans.enabled=false
 connection.gradle.distribution=GRADLE_DISTRIBUTION(WRAPPER)
 connection.project.dir=
 eclipse.preferences.version=1
 gradle.user.home=
-java.home=C\:/Program Files/Java/jdk1.8.0_221
+java.home=C\:/Users/19920/scoop/apps/oraclejdk/current
 jvm.arguments=
 offline.mode=false
 override.workspace.settings=true

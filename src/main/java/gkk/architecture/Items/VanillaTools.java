@@ -1,6 +1,6 @@
 package gkk.architecture.Items;
 
-import net.minecraft.init.Items;
+import gkk.architecture.Architecture;
 import net.minecraft.item.*;
 
 import java.util.ArrayList;
@@ -10,41 +10,52 @@ public class VanillaTools {
 
     public static List<Item> registryVanillaTool(String toolMaterial) {
         ArrayList<Item> items = new ArrayList<>();
-        items.add(new VanillaAxe(Item.ToolMaterial.valueOf(toolMaterial)));
-        items.add(new VanillaPickaxe(Item.ToolMaterial.valueOf(toolMaterial)));
-        items.add(new VanillaSword(Item.ToolMaterial.valueOf(toolMaterial)));
-        items.add(new VanillaSpade(Item.ToolMaterial.valueOf(toolMaterial)));
-        items.add(new VanillaHoe(Item.ToolMaterial.valueOf(toolMaterial)));
+        Item.ToolMaterial material = Item.ToolMaterial.valueOf(toolMaterial);
+        items.add(new VanillaAxe(material));
+        items.add(new VanillaPickaxe(material));
+        items.add(new VanillaSword(material));
+        items.add(new VanillaSpade(material));
+        items.add(new VanillaHoe(material));
         return items;
     }
 
-    public static class VanillaPickaxe extends ItemPickaxe {
+    private static class VanillaPickaxe extends ItemPickaxe {
         public VanillaPickaxe(ToolMaterial material) {
             super(material);
+            setRegistryName(Architecture.MOD_ID, material.name() + "_pickaxe");
+            setTranslationKey(material.name().toLowerCase() + "_pickaxe");
         }
     }
 
-    public static class VanillaAxe extends ItemAxe {
+    private static class VanillaAxe extends ItemAxe {
         public VanillaAxe(ToolMaterial material) {
-            super(material);
+            super(material, 3 * material.getAttackDamage(), -(material.getEfficiency() * 0.4f));
+            setRegistryName(Architecture.MOD_ID, material.name() + "_axe");
+            setTranslationKey(material.name().toLowerCase() + "_axe");
         }
     }
 
-    public static class VanillaHoe extends ItemHoe {
+    private static class VanillaHoe extends ItemHoe {
         public VanillaHoe(ToolMaterial material) {
             super(material);
+            setRegistryName(Architecture.MOD_ID, material.name() + "_hoe");
+            setTranslationKey(material.name().toLowerCase() + "_hoe");
         }
     }
 
-    public static class VanillaSword extends ItemSword {
+    private static class VanillaSword extends ItemSword {
         public VanillaSword(ToolMaterial material) {
             super(material);
+            setRegistryName(Architecture.MOD_ID, material.name() + "_sword");
+            setTranslationKey(material.name().toLowerCase() + "_sword");
         }
     }
 
-    public static class VanillaSpade extends ItemSpade {
+    private static class VanillaSpade extends ItemSpade {
         public VanillaSpade(ToolMaterial material) {
             super(material);
+            setRegistryName(Architecture.MOD_ID, material.name() + "_spade");
+            setTranslationKey(material.name().toLowerCase() + "_spade");
         }
     }
 }
