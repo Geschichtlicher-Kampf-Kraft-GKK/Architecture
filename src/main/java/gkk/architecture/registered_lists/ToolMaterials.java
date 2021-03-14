@@ -1,5 +1,6 @@
 package gkk.architecture.registered_lists;
 
+import gkk.architecture.Items.VanillaTools;
 import gkk.gkkbase.GkkBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
@@ -9,7 +10,6 @@ import net.minecraftforge.registries.IForgeRegistryEntry;
 import java.util.HashMap;
 import java.util.Map;
 
-import VanillaTools;
 
 public class ToolMaterials {
     public static Map<String, ToolMaterial> materials = new HashMap<>();
@@ -48,7 +48,7 @@ public class ToolMaterials {
         private final int enchantAbility;
 
         public ToolMaterial(String name, int harvestLevel, int maxUses, float efficiency, float damage,
-                int enchantAbility) {
+                            int enchantAbility) {
             this.name = name;
             this.harvestLevel = harvestLevel;
             this.maxUses = maxUses;
