@@ -1,6 +1,7 @@
 package gkk.architecture;
 
 import gkk.architecture.registered_lists.Items;
+import gkk.architecture.util.GUIHandler;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -11,6 +12,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 @Mod(modid = Architecture.MOD_ID, name = Architecture.MOD_NAME, version = Architecture.VERSION)
 public class Architecture {
@@ -38,7 +40,6 @@ public class Architecture {
      */
     @Mod.EventHandler
     public void preinit(FMLPreInitializationEvent event) {
-
     }
 
     /**
@@ -46,6 +47,7 @@ public class Architecture {
      */
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+        NetworkRegistry.INSTANCE.registerGuiHandler(Architecture.INSTANCE, new GUIHandler());
 
     }
 
